@@ -20,3 +20,36 @@
 @media(max-width:380px) {
  .brand-logo {width:158px}
 }
+/* Interaction polish: smooth hover, lift on primary CTA, keyboard focus */
+.button,.nav-cta,nav a,.text-link{transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .25s ease}
+.button.primary:hover,.nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(6,59,43,.22)}
+.button.secondary:hover{border-color:#063b2b;color:#063b2b}
+.button.light:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(16,38,28,.14)}
+.text-link:hover{color:#063b2b}
+.hero-card{transition:transform .3s ease,box-shadow .3s ease}
+.hero-card:hover{transform:translateY(-3px);box-shadow:0 36px 80px rgba(16,38,28,.22)}
+a:focus-visible,button:focus-visible,.button:focus-visible{outline:2px solid #2e7d32;outline-offset:3px;border-radius:4px}
+.nav-cta:focus-visible,.button:focus-visible{outline-offset:4px}
+@media(prefers-reduced-motion:reduce){
+ .button,.nav-cta,nav a,.text-link,.hero-card{transition:none}
+ .button.primary:hover,.nav-cta:hover,.button.light:hover,.hero-card:hover{transform:none}
+}
+/* Contact form submission feedback */
+.form-status{margin-top:18px;padding:12px 15px;border-radius:10px;font-size:14px;line-height:1.45}
+.form-status.success{background:#e7f1e5;border:1px solid #a4c6a4;color:#063b2b}
+.form-status.error{background:#fbe9e7;border:1px solid #e5a5a0;color:#8a2a21}
+.form-note code{background:#eef2ec;padding:1px 6px;border-radius:4px;font-size:12px}
+/* Breadcrumb + FAQ */
+.breadcrumb{max-width:1200px;margin:auto;padding:18px 6vw 0;font-size:13px;color:var(--muted)}
+.breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.breadcrumb li+li::before{content:"/";margin-right:6px;color:#aab3a9}
+.breadcrumb a{color:var(--green2);font-weight:650}
+.breadcrumb [aria-current="page"]{color:var(--muted)}
+.faq-section{padding-top:50px;padding-bottom:50px}
+.faq-list{max-width:900px;margin-top:30px;border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-list summary{cursor:pointer;font-weight:750;font-size:18px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-weight:600;color:var(--green2);font-size:22px;line-height:1}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list p{margin:12px 0 0;color:#505c54;max-width:780px}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(py *)",
+      "PowerShell(python -m http.server 8000 --directory \"C:\\\\Users\\\\Admin\\\\Documents\\\\jeenu-corporation\\\\jeenu-corporation-website\" --bind 127.0.0.1)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:8000/\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\) $\\($r.StatusDescription\\)\"; \"Content-Length: $\\($r.Content.Length\\) bytes\" } catch { \"ERROR: $_\" })",
+      "Bash(python *)"
+    ]
+  }
+}
